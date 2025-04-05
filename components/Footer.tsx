@@ -17,7 +17,7 @@ const Footer = () => {
               >
                 <img 
                   src={profile.img} 
-                  alt={profile.id} 
+                  alt={`${profile.id} social media icon`}
                   width={20} 
                   height={20}
                 />
