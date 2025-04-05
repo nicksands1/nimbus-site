@@ -1,5 +1,6 @@
 import { socialMedia } from '@/data'
 import React from 'react'
+import Image from 'next/image'
 
 const Footer = () => {
   return (
@@ -15,7 +16,7 @@ const Footer = () => {
                 className='w-10 h-10 cursor-pointer flex justify-center items-center
                 backdrop-filter backdrop-blur-lg saturate-100 bg-opacity-75 bg-black-200 rounded-lg border border-black-300'
               >
-                <img 
+                <Image 
                   src={profile.img} 
                   alt={`${profile.id} social media icon`}
                   width={20} 
