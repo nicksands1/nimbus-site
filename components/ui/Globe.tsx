@@ -2,9 +2,17 @@
 import { useEffect, useRef, useState } from "react";
 import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";
 import ThreeGlobe from "three-globe";
-import { useThree, Object3DNode, Canvas, extend } from "@react-three/fiber";
+import { useThree, Canvas, extend } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import countries from "@/data/globe.json";
+
+// Define the Object3DNode type locally
+type Object3DNode<T, K> = T & {
+  __r3f: {
+    type: K;
+  };
+};
+
 declare module "@react-three/fiber" {
   interface ThreeElements {
     threeGlobe: Object3DNode<ThreeGlobe, typeof ThreeGlobe>;
@@ -225,7 +233,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
   return (
     <>
-      <threeGlobe ref={globeRef} />
+      <primitive object={new ThreeGlobe()} ref={globeRef} />
     </>
   );
 }
@@ -235,7 +243,7 @@ export function WebGLRendererConfig() {
 
   useEffect(() => {
     gl.setPixelRatio(window.devicePixelRatio);
-    gl.setSize(size.width, size.height);
+    // Remove the setSize call
     gl.setClearColor(0xffaaff, 0);
   }, []);
 
