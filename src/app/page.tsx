@@ -1,8 +1,10 @@
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import Roadmap from "@/components/Roadmap";
-import { FloatingNav } from "@/components/ui/FloatingNav";
+import Footer from "@/src/components/Footer";
+import Hero from "@/src/components/Hero";
+import Roadmap from "@/src/components/Roadmap";
+import { Features } from "@/src/components/ui/Features";
+import { FloatingNav } from "@/src/components/ui/FloatingNav";
 import { FaHome } from "react-icons/fa";
+import Grid from "../components/Grid";
 
 
 export default function Home() {
@@ -15,6 +17,8 @@ export default function Home() {
           {name: 'Home', link: '/', icon: <FaHome />}
         ]}/>
         <Hero />
+        <Grid />
+        <Features />
         <Roadmap />
         <Footer />
       </div>
