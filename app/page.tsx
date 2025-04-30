@@ -1,5 +1,4 @@
 import Footer from "@/components/Footer";
-import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import Roadmap from "@/components/Roadmap";
 import { FloatingNav } from "@/components/ui/FloatingNav";
