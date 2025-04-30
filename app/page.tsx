@@ -15,7 +15,6 @@ export default function Home() {
           {name: 'Home', link: '/', icon: <FaHome />}
         ]}/>
         <Hero />
-        <Grid />
         <Roadmap />
         <Footer />
       </div>
