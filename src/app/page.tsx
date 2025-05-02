@@ -1,6 +1,5 @@
 import Hero from "@/src/components/Hero";
 import Roadmap from "@/src/components/Roadmap";
-import { Features } from "@/src/components/ui/Features";
 import { FaHome } from "react-icons/fa";
 
 
