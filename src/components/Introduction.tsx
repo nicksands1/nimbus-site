@@ -1,7 +1,7 @@
 import React from 'react'
 import Tag from './Tag'
 
-const text = `Our platform transforms assets into functional communities where token ownership grants access to exclusive content and experiences. Nimbus establishes a new standard of legitimacy in the crypto space—one where communities unite around genuine utility rather than hype cycles and empty promises.`
+const text = `Nimbus transforms assets into functional communities where token ownership grants access to exclusive content and experiences. Nimbus establishes a new standard of legitimacy in the crypto space—one where communities unite around genuine utility rather than hype cycles and empty promises.`
 
 const Introduction = () => {
   return (
