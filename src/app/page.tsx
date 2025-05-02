@@ -1,4 +1,5 @@
 import Hero from "@/src/components/Hero";
+import Introduction from "../components/Introduction";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
     mx-auto sm:px-10 px-5">
       <div className="max-w-7xl w-full">
         <Hero />
+        <Introduction />
       </div>
     </main>
   );
