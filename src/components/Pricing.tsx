@@ -6,45 +6,46 @@ import { FaCheckCircle } from "react-icons/fa";
 export const pricingTiers = [
     {
       title: "Basic",
-      description: "AI chatbot, personalized recommendations",
-      price: "Free",
+      description: "Build simple token-gated sites with essential tools",
+      price: 150,
       buttonText: "Get Started",
       features: [
-        "Access to AI chatbot for natural language conversations",
-        "Basic task automation for simple workflows",
-        "Limited message history storage",
+        "1 project",
+        "Basic templates",
+        "Nimbus branding",
       ],
-      color: "amber",
+      color: "white",
       className: "lg:py-12 lg:my-6",
     },
     {
       title: "Premium",
-      description: "Advanced AI capabilities for enhanced productivity",
-      price: 99,
+      description: "Expand your token utility with advanced customization",
+      price: 249,
       buttonText: "Upgrade to Premium",
       features: [
-        "All Basic features included",
-        "Priority access to new AI features and updates",
-        "Advanced automation tools for seamless task management",
-        "Customizable chat templates for your specific workflows",
+        "3 projects",
+        "Premium templates",
+        "Multi-token access rules",
+        "Custom domain",
+        "No Nimbus branding"
       ],
-      color: "violet",
+      color: "yellow",
       className: "lg:py-18 lg:my-0",
     },
     {
       title: "Enterprise",
-      description: "Custom AI chatbot, advanced analytics, dedicated account",
-      price: null,
+      description: "Comprehensive tools for serious web3 communities",
+      price: "Varies",
       buttonText: "Contact Us",
       buttonVariant: "primary",
       features: [
-        "All Premium features included",
-        "Dedicated account manager and priority customer support",
-        "Enhanced security and compliance features for large teams",
-        "Custom AI models tailored to your organization's needs",
-        "API access for seamless integration with enterprise systems",
+        "10 projects",
+        "All templates + priority access",
+        "Advanced analytics",
+        "Priority support",
+        "API access",
       ],
-      color: "teal",
+      color: "orange",
       className: "lg:py-12 lg:my-6",
     },
   ];
@@ -58,7 +59,7 @@ export const pricingTiers = [
                     <div className="mt-12 flex flex-col lg:flex-row lg:items-start gap-8">
                         {pricingTiers.map((tier) => (
                             <div key={tier.title} className={twMerge("border border-white-100 rounded-3xl px-6 py-12 max-w-sm mx-auto flex-1", tier.className)}>
-                                <h3 className={twMerge("font-semibold text-4xl", tier.color === 'violet' && 'text-violet-400', tier.color === 'amber' && 'text-amber-300', tier.color === 'teal' && 'text-teal-300')}>{tier.title}</h3>
+                                <h3 className={twMerge("font-semibold text-4xl", tier.color === 'yellow' && 'text-yellow-400', tier.color === 'amber' && 'text-amber-300', tier.color === 'orange' && 'text-orange-300')}>{tier.title}</h3>
                                 <p className="mt-4 text-gray-400">{tier.description}</p>
                                 <div className="mt-8">
                                     {typeof tier.price === 'number' && (
