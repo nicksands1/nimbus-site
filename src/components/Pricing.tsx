@@ -50,7 +50,7 @@ export const pricingTiers = [
   ];
   
   export const Pricing = () => {
-    return <section className="pb-[1000px]">
+    return <section className="">
         <div className="container">
             <SectionBorder>
                 <SectionContent>
