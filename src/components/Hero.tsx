@@ -27,15 +27,15 @@ const Hero = () => {
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw]
           flex flex-col items-center justify center">
           <h2 className="uppercase tracking-widest text-xs text-center 
-          text-yellow-300 max-w-80">NimbusChain
+          text-yellow-300 max-w-80">Build With Nimbus
           </h2>
 
           <TextGenerateEffect 
           
             className="text-center text-[40px] md:text:5xl lg:text-6xl"
-            words="Bridging the Future: Blockchain Solutions for a Decentralized World"/>
+            words="Asset-gated site builder deployed on Solana"/>
             <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Web3 Development, Simplified.
+            No code, No wait.
             </p>
 
             <a href="#roadmap">
