@@ -1,6 +1,4 @@
 import Hero from "@/src/components/Hero";
-import { FaHome } from "react-icons/fa";
-
 
 export default function Home() {
   return (
