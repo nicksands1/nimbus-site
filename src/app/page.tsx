@@ -1,5 +1,4 @@
 import Hero from "@/src/components/Hero";
-import Roadmap from "@/src/components/Roadmap";
 import { FaHome } from "react-icons/fa";
 
 
@@ -10,7 +9,6 @@ export default function Home() {
     mx-auto sm:px-10 px-5">
       <div className="max-w-7xl w-full">
         <Hero />
-        <Roadmap />
       </div>
     </main>
   );
