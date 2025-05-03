@@ -163,29 +163,29 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Turn Hype into Utility",
+    desc: "Launch a holder-only portal for announcements, airdrops, and alpha. Keep your community engaged beyond launch day — no devs required.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+    title: "Govern Smarter, Gate Better",
+    desc: "Build proposal boards, contributor-only dashboards, or treasury updates. Segment access by roles with zero-code setup.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+    title: "NFT-gated content for your biggest fans",
+    desc: "Upload videos, music, blog posts or livestreams behind token-gated pages. Give fans access and control your own platform without middlemen.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Merch Drops for Real Holders",
+    desc: "Launch exclusive merch or digital goods that only your NFT or token holders can claim.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },

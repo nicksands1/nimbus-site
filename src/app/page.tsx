@@ -1,6 +1,7 @@
 import Hero from "@/src/components/Hero";
 import Introduction from "../components/Introduction";
 import Pricing from "../components/Pricing";
+import UseCases from "../components/UseCases";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <div className="max-w-7xl w-full">
         <Hero />
         <Introduction />
+        <UseCases />
         <Pricing />
       </div>
     </main>
