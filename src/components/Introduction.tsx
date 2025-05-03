@@ -46,7 +46,7 @@ const Introduction = () => {
                         <span className='text-yellow-400 block'>That&apos;s why we built Nimbus</span>
                     </div>
                 </div>
-                <div className='h-[10vh]' ref={scrollTarget}></div>
+                <div className='h-[20vh]' ref={scrollTarget}></div>
             </div>
         </section>
     );
