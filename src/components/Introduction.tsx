@@ -12,7 +12,7 @@ const Introduction = () => {
     const scrollTarget = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({ 
         target: scrollTarget, 
-        offset: ['start end', 'center center']
+        offset: ['start end', 'end end']
     });
 
     const [currentWord, setCurrentWord] = useState(0);
