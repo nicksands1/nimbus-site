@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 // Utility type for polymorphic component props
 type PolymorphicComponentProps<
   T extends ElementType,
-  Props = {}
+  Props = Record<string, unknown> // Changed from {} to Record<string, unknown>
 > = Props & Omit<React.ComponentPropsWithoutRef<T>, keyof Props | "as"> & {
     as?: T;
 };
