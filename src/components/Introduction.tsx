@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 import Tag from './Tag'
-import { useScroll, useTransform } from 'framer-motion'
+import { useMotionValueEvent, useScroll, useTransform } from 'framer-motion'
 import { twMerge } from 'tailwind-merge'
 
 const text = `Nimbus transforms assets into functional communities where token owners gain access to exclusive content and experiences. Nimbus is the new standard of legitimacy in the crypto space—one where communities unite around genuine utility rather than hype cycles and empty promises.`
@@ -12,7 +12,7 @@ const Introduction = () => {
     const scrollTarget = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({ 
         target: scrollTarget, 
-        offset: ['start end', 'end end']
+        offset: ['start 0.9', 'end 0.2'] // Custom offset values for better mobile experience
     });
 
     const [currentWord, setCurrentWord] = useState(0);
@@ -46,7 +46,7 @@ const Introduction = () => {
                         <span className='text-yellow-400 block'>That&apos;s why we built Nimbus</span>
                     </div>
                 </div>
-                <div className='h-[20vh]' ref={scrollTarget}></div>
+                <div className='h-[40vh] md:h-[30vh]' ref={scrollTarget}></div>
             </div>
         </section>
     );
