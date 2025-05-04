@@ -15,7 +15,7 @@ function Header() {
   };
 
   return (
-    <header className={`py-2 ${isMobileMenuOpen ? '' : 'border-b border-white/15'} md:border-none`}>
+    <header className={`py-2 ${isMobileMenuOpen ? '' : 'border-b border-white/15'} md:border-none relative z-20`}>
         <div className='container'>
             <div className='flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl max-w-2xl mx-auto'>
                 <div>
@@ -50,14 +50,14 @@ function Header() {
                 </div>
             </div>
             
-            {/* Mobile menu dropdown */}
+            {/* Floating mobile menu with no borders or box */}
             {isMobileMenuOpen && (
-              <div className='md:hidden mt-4 bg-black/60 backdrop-blur-lg rounded-lg p-4 border border-white/15 max-w-2xl mx-auto'>
-                <nav className='flex flex-col gap-4 text-sm'>
-                  <a href='#' className='text-white/70 hover:text-white transition py-2'>What is Nimbus</a>
-                  <a href='#' className='text-white/70 hover:text-white transition py-2'>How It Works</a>
-                  <a href='#' className='text-white/70 hover:text-white transition py-2'>Use Cases</a>
-                  <a href='#' className='text-white/70 hover:text-white transition py-2'>Pricing</a>
+              <div className='md:hidden absolute left-0 right-0 z-10'>
+                <nav className='flex flex-col items-center gap-6 text-base py-6'>
+                  <a href='#' className='text-white font-medium hover:text-white/90 transition'>What is Nimbus</a>
+                  <a href='#' className='text-white font-medium hover:text-white/90 transition'>How It Works</a>
+                  <a href='#' className='text-white font-medium hover:text-white/90 transition'>Use Cases</a>
+                  <a href='#' className='text-white font-medium hover:text-white/90 transition'>Pricing</a>
                 </nav>
               </div>
             )}
