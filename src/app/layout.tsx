@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "NimbusChain",
   description: "Landing Page/Roadmap",
+  icons: {
+    icon: "/favicon.ico",
+  }
 };
 
 export default function RootLayout({
@@ -19,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/jsm-logo.png" sizes="any" />
+        <link rel="icon" href="/favicon.ico" sizes="any" type="image/x-icon"/>
       </head>
       <body className={inter.className}>
         <ThemeProvider
