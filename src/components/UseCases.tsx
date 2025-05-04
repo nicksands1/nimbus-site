@@ -4,7 +4,7 @@ import { Button } from './ui/MovingBorders'
 
 const UseCases = () => {
   return (
-    <div className='py-20'>
+    <div className='py-20' id='usecase'>
       <h1 className='heading'>
         Use <span className='text-yellow-400'> Cases</span>
       </h1>

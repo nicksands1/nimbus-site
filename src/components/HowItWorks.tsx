@@ -32,7 +32,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-24">
+    <section className="py-24" id="howitworks">
       {/* You can customize the background color here */}
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
