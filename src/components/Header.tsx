@@ -14,6 +14,16 @@ function Header() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Function to handle smooth scrolling
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    // Close the mobile menu after clicking a link
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header className={`py-2 ${isMobileMenuOpen ? '' : 'border-b border-white/15'} md:border-none relative z-20`}>
         <div className='container'>
@@ -25,10 +35,34 @@ function Header() {
                 </div>
                 <div className='hidden md:block'>
                     <nav className='flex gap-8 text-sm'>
-                        <a href='#intro' className='text-white/70 hover:text-white transition'>What is Nimbus</a>
-                        <a href='#howitworks' className='text-white/70 hover:text-white transition'>How It Works</a>
-                        <a href='#usecase' className='text-white/70 hover:text-white transition'>Use Cases</a>
-                        <a href='#pricing' className='text-white/70 hover:text-white transition'>Pricing</a>
+                        <a 
+                          href="#intro" 
+                          onClick={(e) => {e.preventDefault(); scrollToSection('intro')}} 
+                          className='text-white/70 hover:text-white transition'
+                        >
+                          What is Nimbus
+                        </a>
+                        <a 
+                          href="#howitworks" 
+                          onClick={(e) => {e.preventDefault(); scrollToSection('howitworks')}} 
+                          className='text-white/70 hover:text-white transition'
+                        >
+                          How It Works
+                        </a>
+                        <a 
+                          href="#usecase" 
+                          onClick={(e) => {e.preventDefault(); scrollToSection('usecase')}} 
+                          className='text-white/70 hover:text-white transition'
+                        >
+                          Use Cases
+                        </a>
+                        <a 
+                          href="#pricing" 
+                          onClick={(e) => {e.preventDefault(); scrollToSection('pricing')}} 
+                          className='text-white/70 hover:text-white transition'
+                        >
+                          Pricing
+                        </a>
                     </nav>
                 </div>
                 <div className="flex gap-4 items-center">
@@ -38,7 +72,7 @@ function Header() {
                             <div className='rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]'></div>
                             <div className='absolute inset-0 shadow-[0_0_10px_rgb(252,182,68,.7)_inset] rounded-lg'></div>
                         </div>
-                        <span>Join Beta</span>
+                        <span className="relative z-10">Join Beta</span>
                     </button>
                     <button 
                       onClick={toggleMobileMenu} 
@@ -50,14 +84,38 @@ function Header() {
                 </div>
             </div>
             
-            {/* Floating mobile menu with no borders or box */}
+            {/* Floating mobile menu with background and positioning fix */}
             {isMobileMenuOpen && (
-              <div className='md:hidden absolute left-0 right-0 z-10'>
-                <nav className='flex flex-col items-center gap-6 text-base py-6'>
-                  <a href='#' className='text-white font-medium hover:text-white/90 transition'>What is Nimbus</a>
-                  <a href='#' className='text-white font-medium hover:text-white/90 transition'>How It Works</a>
-                  <a href='#' className='text-white font-medium hover:text-white/90 transition'>Use Cases</a>
-                  <a href='#' className='text-white font-medium hover:text-white/90 transition'>Pricing</a>
+              <div className='md:hidden absolute left-0 right-0 top-full z-50 px-4'>
+                <nav className='flex flex-col items-center gap-6 text-base py-8'>
+                  <a 
+                    href="#intro" 
+                    onClick={(e) => {e.preventDefault(); scrollToSection('intro')}} 
+                    className='text-white font-medium hover:text-white/90 transition'
+                  >
+                    What is Nimbus
+                  </a>
+                  <a 
+                    href="#howitworks" 
+                    onClick={(e) => {e.preventDefault(); scrollToSection('howitworks')}} 
+                    className='text-white font-medium hover:text-white/90 transition'
+                  >
+                    How It Works
+                  </a>
+                  <a 
+                    href="#usecase" 
+                    onClick={(e) => {e.preventDefault(); scrollToSection('usecase')}} 
+                    className='text-white font-medium hover:text-white/90 transition'
+                  >
+                    Use Cases
+                  </a>
+                  <a 
+                    href="#pricing" 
+                    onClick={(e) => {e.preventDefault(); scrollToSection('pricing')}} 
+                    className='text-white font-medium hover:text-white/90 transition'
+                  >
+                    Pricing
+                  </a>
                 </nav>
               </div>
             )}
