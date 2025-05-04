@@ -4,6 +4,8 @@ import Pricing from "../components/Pricing";
 import UseCases from "../components/UseCases";
 import HowItWorks from "../components/HowItWorks";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+import CTA from "../components/CTA";
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
         <HowItWorks />
         <UseCases />
         <Pricing />
+        <CTA />
+        <Footer />
       </div>
     </main>
   );
