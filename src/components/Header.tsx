@@ -4,6 +4,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import nimbusLogo from '../assets/nimbus.png';
 import MenuIcon from '../assets/icon-menu.svg'
+import Link from 'next/link';
 
 function Header() {
   // State to track if mobile menu is open
@@ -30,7 +31,9 @@ function Header() {
             <div className='flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl max-w-2xl mx-auto'>
                 <div>
                     <div className=''>
-                        <Image src={nimbusLogo} alt='Nimbus Logo' className='h-12 w-12'/>
+                        <Link href='/'>
+                          <Image src={nimbusLogo} alt='Nimbus Logo' className='h-12 w-12'/>
+                        </Link>
                     </div>
                 </div>
                 <div className='hidden md:block'>
@@ -66,6 +69,7 @@ function Header() {
                     </nav>
                 </div>
                 <div className="flex gap-4 items-center">
+                    <Link href='/join-beta'>
                     <button className='relative py-2 px-3 rounded-lg font-medium text-sm bg-gradient-to-b from-[#ff8124] to-[#f71d11] shadow-[0px_0px_12px_#f28680]'>
                         <div className='absolute inset-0'>
                             <div className='rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]'></div>
@@ -74,6 +78,7 @@ function Header() {
                         </div>
                         <span className="relative z-10">Join Beta</span>
                     </button>
+                    </Link>
                     <button 
                       onClick={toggleMobileMenu} 
                       className='md:hidden'
