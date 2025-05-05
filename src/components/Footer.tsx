@@ -17,15 +17,10 @@ const Footer = () => {
                     <div className='font-medium'>Nimbus</div>
                 </div>
                     <nav className='flex flex-col lg:flex-row gap-5 lg:gap-7 lg:flex-1 lg:justify-center'>
-                        <a href='' className='text-white/70 hover:text-white text-xs md:text-sm'>link 1</a>
-                        <a href='' className='text-white/70 hover:text-white text-xs md:text-sm'>link 2</a>
-                        <a href='' className='text-white/70 hover:text-white text-xs md:text-sm'>link 3</a>
-                        <a href='' className='text-white/70 hover:text-white text-xs md:text-sm'>link 4</a>
-                        <a href='' className='text-white/70 hover:text-white text-xs md:text-sm'>link 5</a>
                     </nav>
                 <div className='flex gap-5 lg:flex-1 lg:justify-end'>
-                    <FaLinkedinIn className='h-4 w-4 text-white/40 hover:text-white text-sm'/>
-                    <FaInstagram className='h-4 w-4 text-white/40 hover:text-white text-sm'/>
+                    <FaLinkedinIn className='h-4 w-4 text-white/40 hover:text-white text-sm' href='https://www.linkedin.com/company/nimbus-chain'/>
+                    <FaInstagram className='h-4 w-4 text-white/40 hover:text-white text-sm' href='https://www.instagram.com/nimbus.chain'/>
                     <FaTiktok className='h-4 w-4 text-white/40 hover:text-white text-sm'/>
                     <FaYoutube className='h-4 w-4 text-white/40 hover:text-white text-sm'/>
                 </div>
