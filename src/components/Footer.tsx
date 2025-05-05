@@ -18,12 +18,24 @@ const Footer = () => {
                 </div>
                     <nav className='flex flex-col lg:flex-row gap-5 lg:gap-7 lg:flex-1 lg:justify-center'>
                     </nav>
-                <div className='flex gap-5 lg:flex-1 lg:justify-end'>
-                    <FaLinkedinIn className='h-4 w-4 text-white/40 hover:text-white text-sm' href='https://www.linkedin.com/company/nimbus-chain'/>
-                    <FaInstagram className='h-4 w-4 text-white/40 hover:text-white text-sm' href='https://www.instagram.com/nimbus.chain'/>
-                    <FaTiktok className='h-4 w-4 text-white/40 hover:text-white text-sm'/>
-                    <FaYoutube className='h-4 w-4 text-white/40 hover:text-white text-sm'/>
-                </div>
+                    <div className='flex gap-5 lg:flex-1 lg:justify-end'>
+  <a 
+    href='https://www.linkedin.com/company/nimbus-chain' 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className='hover:text-white'
+  >
+    <FaLinkedinIn className='h-4 w-4 text-white/40 hover:text-white text-sm' />
+  </a>
+  <a 
+    href='https://www.instagram.com/nimbus.chain' 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className='hover:text-white'
+  >
+    <FaInstagram className='h-4 w-4 text-white/40 hover:text-white text-sm' />
+  </a>
+</div>
             </div>
         </div>
     </footer>
