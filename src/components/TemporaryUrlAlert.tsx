@@ -16,9 +16,9 @@ export default function TemporaryUrlAlert() {
   if (!isVisible) return null
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center p-4 bg-amber-500 text-black">
+    <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center p-2 bg-amber-500 text-black">
       <div className="flex items-center justify-between w-full max-w-6xl">
-        <p className="text-sm md:text-base font-medium">
+        <p className="text-sm md:text-base font-medium text-center">
           Please note: This URL is temporary and will change within the next 48-72 hours.
         </p>
         <button 

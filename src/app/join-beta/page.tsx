@@ -9,9 +9,11 @@ const CTA = () => {
   return (
     <section className='py-20 md:py-24'>
         <div className='container'>
+            <div className='flex justify-between items-center'>
             <Link href='/'>
                 <Image src={nimbusLogo} alt='Nimbus Logo' className='h-12 w-12'/>
             </Link>
+            </div>
             <div className='border border-white/15 py-24 rounded-xl overflow-hidden relative' style={{
                 backgroundImage: `url(${starsBg.src})`
             }}> <div className='absolute inset-0 bg-[rgb(232,112,52)] bg-blend-overlay [mask-image:radial-gradient(50%_50%_at_50%_35%,black,transparent)]' style={{
