@@ -1,33 +1,29 @@
 "use client";
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Button } from './ui/MovingBorders';
 
 const HowItWorks = () => {
   const steps = [
     {
       id: 1,
-      title: 'Create Your Community',
-      description: 'Set up your space and define your communitys unique access requirements.',
-      icon: '✨',
+      title: 'Choose Token',
+      description: 'Users connect their Solana wallet and select the token they want to gate content with. Nimbus supports any SPL token — no allowlist or custom integration needed',
     },
     {
       id: 2,
-      title: 'Connect Assets',
-      description: 'Link NFTs, tokens, and other digital assets to enable access control.',
-      icon: '🔗',
+      title: 'Build Your Page',
+      description: 'Use Nimbus’s intuitive, no-code editor to build a landing page, portal, or dashboard. Add gated files, announcements, embeds, or links — all without writing a single line of code.',
     },
     {
       id: 3,
-      title: 'Customize Experience',
-      description: 'Design membership tiers and exclusive content for your community.',
-      icon: '🎨',
+      title: 'Set Access Rules',
+      description: 'Define exactly who gets access by setting token-gating rules: minimum balance, time-locks, or token type (e.g., NFTs, memecoins, governance tokens). Nimbus checks wallet balances in real-time to validate entry.',
     },
     {
       id: 4,
-      title: 'Engage & Grow',
-      description: 'Foster meaningful interactions and expand your community over time.',
-      icon: '📈',
+      title: 'Deploy and Share',
+      description: 'Once published, your page is live with a unique URL. Share it with your community, and anyone holding your token can unlock access — turning your coin into a product.',
     },
   ];
 
@@ -37,47 +33,35 @@ const HowItWorks = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           {/* You can customize the heading color here */}
-          <h2 className="text-4xl font-bold mb-4">How It Works</h2>
+          <h1 className='heading'>
+        How it  <span className='text-yellow-400'>Works</span>
+      </h1>
           {/* You can customize the subtitle color here */}
-          <p className="text-xl max-w-2xl mx-auto opacity-80">
+          <p className="text-xl max-w-2xl mx-auto opacity-80 py-4">
             Follow these simple steps to transform your assets into thriving communities with Nimbus
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step, index) => (
-            <motion.div
-              key={step.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="flex flex-col items-center"
-            >
-              {/* Card container - You can customize the background and border colors here */}
-              <div className="relative w-full h-full rounded-2xl p-6 border border-gray-800 bg-gray-900/50 backdrop-blur-sm overflow-hidden">
-                {/* Decorative gradient - You can customize this gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/5 rounded-2xl -z-10" />
-                
-                {/* Icon container - You can customize the background color here */}
-                <div className="flex items-center justify-center w-12 h-12 text-2xl rounded-full mb-4 bg-gradient-to-br from-purple-500 to-blue-500">
-                  {step.icon}
-                </div>
-                
-                <div className="space-y-3">
-                  {/* Step indicator - You can customize the color here */}
-                  <p className="text-sm font-semibold text-blue-400">Step {step.id}</p>
-                  
-                  {/* Card title - You can customize the text color here */}
-                  <h3 className="text-xl font-bold">{step.title}</h3>
-                  
-                  {/* Card description - You can customize the text color here */}
-                  <p className="opacity-70">{step.description}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+        <div className="hidden lg:flex flex-row gap-4 w-full">
+  {steps.map((step, index) => (
+    <Button
+      key={step.title || index}
+      className="w-full text-white border-neutral-200 dark:border-yellow-400"
+      duration={Math.floor(Math.random() * 10000)}
+    >
+      <div className="relative w-full h-full rounded-2xl p-6">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/5 rounded-2xl -z-10" />
+
+        <div className="space-y-3">
+          <p className="text-sm font-semibold text-yellow-400">Step {step.id}</p>
+          <h3 className="text-xl font-bold">{step.title}</h3>
+          <p className="opacity-70">{step.description}</p>
         </div>
+      </div>
+    </Button>
+  ))}
+</div>
+
       </div>
     </section>
   );
