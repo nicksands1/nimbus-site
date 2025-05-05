@@ -4,8 +4,6 @@ import Image from 'next/image'
 import nimbusLogo from '../assets/nimbus.png';
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
